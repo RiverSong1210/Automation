@@ -1,0 +1,18 @@
+{
+  "validCategories": [
+    {
+      "category": "DevOps",
+      "subCategory": "UNIX"
+    },
+    {
+      "category": "Databases",
+      "subCategory": "SQL"
+    }
+  ],
+  "invalidCategories": [
+    {
+      "category": "DevOps",
+      "subCategory": "bad"
+    }
+  ]
+}

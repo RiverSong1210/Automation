@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.tutorialspoint</groupId>
+  <artifactId>Automation</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Automation</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Use the latest stable versions as you see fit -->
+    <selenide.version>6.19.1</selenide.version>
+    <webdrivermanager.version>5.7.0</webdrivermanager.version>
+    <testng.version>7.8.0</testng.version>
+    <jackson.version>2.16.1</jackson.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+
+
+
+  <dependencies>
+    <!-- Selenide -->
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>${selenide.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- WebDriverManager -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- TestNG -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Surefire plugin to run TestNG tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M9</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </testResource>
+    </testResources>
+  </build>
+
+
+
+</project>
