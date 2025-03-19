@@ -16,9 +16,9 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setUp() {
+
         // 1. Load the JSON config data
         testConfig = ConfigManager.loadJsonConfig();
-
 
         // 2. Initialize the WebDriver
         WebDriverManager.chromedriver().setup();

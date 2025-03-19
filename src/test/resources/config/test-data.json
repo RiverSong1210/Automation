@@ -8,11 +8,5 @@
       "category": "Databases",
       "subCategory": "SQL"
     }
-  ],
-  "invalidCategories": [
-    {
-      "category": "DevOps",
-      "subCategory": "bad"
-    }
   ]
 }

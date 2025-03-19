@@ -17,7 +17,6 @@ public class TestConfig {
         this.subCategory = subCategory;
     }
 
-    // Getters and setters
     public String getBaseUrl() {
         return baseUrl;
     }
